@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3307
--- Thời gian đã tạo: Th9 23, 2025 lúc 03:22 PM
+-- Thời gian đã tạo: Th9 30, 2025 lúc 01:14 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -40,7 +40,8 @@ INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (1, 'Guitars'),
 (2, 'Basses'),
 (3, 'Drums'),
-(5, 'piano');
+(5, 'violon'),
+(6, 'Piano');
 
 -- --------------------------------------------------------
 
@@ -78,12 +79,14 @@ INSERT INTO `products` (`productID`, `categoryID`, `productCode`, `productName`,
 (3, 1, 'sg', 'Gibson SG', 2517.00),
 (4, 1, 'fg700s', 'Yamaha FG700S', 489.99),
 (5, 1, 'washburn', 'Washburn D10S', 299.00),
+(6, 1, 'rodriguez', 'Rodriguez Caballero 11', 415.00),
 (7, 2, 'precision', 'Fender Precision', 799.99),
 (8, 2, 'hofner', 'Hofner Icon', 499.99),
 (9, 3, 'ludwig', 'Ludwig 5-piece Drum Set with Cymbals', 699.99),
 (10, 3, 'tama', 'Tama 5-Piece Drum Set with Cymbals', 799.99),
-(12, 1, '70447', 'dieuthao06', 123.00),
-(13, 5, '07994', 'abc', 567.00);
+(15, 2, '07994', 'abc', 567.00),
+(16, 6, '12', 'qwe', 234.00),
+(17, 5, '13', 'ert', 456.00);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -128,7 +131,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

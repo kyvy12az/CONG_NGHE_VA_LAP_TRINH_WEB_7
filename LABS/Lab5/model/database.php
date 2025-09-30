@@ -1,5 +1,5 @@
 <?php
-    $dsn = 'mysql:host=localhost:3306;dbname=my_guitar_shop1';
+    $dsn = 'mysql:host=localhost:3307;dbname=my_guitar_shop1';
     $username = 'root';
     $password = '';
 
@@ -7,7 +7,7 @@
         $db = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
-        include('database_error.php');
+        include('../errors/database_error.php');
         exit();
     }
 ?>
